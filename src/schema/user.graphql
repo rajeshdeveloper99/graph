@@ -1,0 +1,11 @@
+# schema/user.graphql
+type User {
+  id: ID!
+  username: String!
+  email: String!
+}
+
+extend type Query {
+  getUsers: [User]
+  getUser(id: ID!): User
+}
